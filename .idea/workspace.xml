@@ -5,15 +5,99 @@
       <artifact name="STL" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/GUI/DatabaseBox.java" line="135" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-    <ignored path="JavaFxApplication.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/STL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/CSV/CSVCondition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Database/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Database/DatabaseConditions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/AlertBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/ConfirmBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/DatabaseBox$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/DatabaseBox$login_states.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/DatabaseBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/InformationBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/OpenBox$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/OpenBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/ProgramGUI$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/ProgramGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/ProgramGUI$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/ProgramGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/ProgramGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/ResultsBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/GUI/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Main/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Main/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Main/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/AmbulanceCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/CarFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/CarFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/CarTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/PoliceCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/TaxiCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/TrackCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Car/UsualCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Conditions/Conditions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Crossroad/Crossroad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/CrossroadInfo/CrossroadInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/CrossroadInfo/DirectionInfo/DirectionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/DrawObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Road/Road.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/Road/RoadCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/TrafficLight/TrafficLight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/TrafficLight/TrafficLightState/GreenState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/TrafficLight/TrafficLightState/RedState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/TrafficLight/TrafficLightState/RedYellowState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/TrafficLight/TrafficLightState/State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/TrafficLight/TrafficLightState/YellowState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Objects/TrafficLight/TrafficLightTimeDistribution/TimeDistribution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/Algorithm/Algorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/AlgorithmSTL/AlgorithmConditions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/AlgorithmSTL/AlgorithmCore/DFBnB$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/AlgorithmSTL/AlgorithmCore/DFBnB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/AlgorithmSTL/AlgorithmLaneInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/AlgorithmSTL/AlgorithmRules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/AlgorithmSTL/AlgorithmSTL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/AlgorithmSTL/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/SystemSTL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/TrafficComputation/Car/CarComputation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/TrafficComputation/Car/CarInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/TrafficComputation/Lane/LaneComputation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/TrafficComputation/Lane/LaneInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/TrafficComputation/TrafficComputation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/TrafficComputation/TrafficExecutor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/TrafficComputation/TrafficExecutor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/SystemSTL/TrafficLightsComputation/TrafficLightsComputation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tests/CarTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tests/ConditionsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tests/CrossroadInfoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tests/DirectionInfoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tests/RoadCreatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tests/TimeDistributionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tests/TrafficLightTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tools/ConsoleColors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tools/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tools/Formulas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/STL/Tools/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ProgramGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ProgramGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/ResultsBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/ResultsBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tools/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tools/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tools/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tools/Utils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,14 +143,6 @@
     </breakpoint_any>
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication">
-      <favorite_root url="file://$PROJECT_DIR$/src/SystemSTL/TrafficLightsComputation.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-    </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -272,12 +348,16 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1612" />
     <option name="height" value="876" />
   </component>
+  <component name="ProjectId" id="2qCOodTqIOSL1kwTCVhA2OEWMJA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
@@ -311,49 +391,37 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="smart-traffic-light" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595645753357" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/Tests" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Windows/IdeaProjects/foot_slam/lib/jSerialComm-2.11.0.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="Tests" />
-      <recent name="Objects.CrossroadInfo" />
-      <recent name="Objects.Car" />
-      <recent name="Objects.TrafficLight.TrafficLightTimeDistribution" />
-      <recent name="System" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="GUI" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -362,20 +430,21 @@
       <recent name="E:\Final Project\Project\Smart-Traffic-Light\images\info" />
       <recent name="E:\Final Project\Smart-Traffic-Light\src\Main" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Tests" />
+      <recent name="Objects.CrossroadInfo" />
+      <recent name="Objects.Car" />
+      <recent name="Objects.TrafficLight.TrafficLightTimeDistribution" />
+      <recent name="System" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -388,16 +457,21 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="STL" />
-      <option name="VM_PARAMETERS" value="--module-path C:\javafx-sdk-13.0.2\lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\javafx-sdk-17.0.13\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Main.*" />
@@ -534,15 +608,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.CarTest" />
+      <item itemvalue="JUnit.Tests in STL" />
+      <item itemvalue="JUnit.TrafficLightTest" />
+      <item itemvalue="JUnit.TrafficLightTest.changeState" />
+      <item itemvalue="JUnit.TrafficLightTest.getTrafficLightStateName" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CarTest" />
@@ -553,6 +626,15 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -588,6 +670,8 @@
       <workItem from="1601552107686" duration="13532000" />
       <workItem from="1601718313801" duration="13089000" />
       <workItem from="1602573432592" duration="5723000" />
+      <workItem from="1734163291684" duration="19734000" />
+      <workItem from="1734296063678" duration="52957000" />
     </task>
     <servers />
   </component>
@@ -679,33 +763,9 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -720,9 +780,17 @@
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="XDebuggerManager">
@@ -785,7 +853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CSVs/test.txt" />
     <entry file="file://$PROJECT_DIR$/src/CSV.java" />
-    <entry file="jar://C:/javafx-sdk-13.0.2/lib/javafx.base.jar!/javafx/beans/property/ReadOnlyObjectPropertyBase.class">
+    <entry file="jar://$PROJECT_DIR$/../../../../../../javafx-sdk-13.0.2/lib/javafx.base.jar!/javafx/beans/property/ReadOnlyObjectPropertyBase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
@@ -795,21 +863,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/javafx-sdk-13.0.2/lib/javafx.base.jar!/javafx/beans/property/ReadOnlyObjectWrapper.class">
+    <entry file="jar://$PROJECT_DIR$/../../../../../../javafx-sdk-13.0.2/lib/javafx.base.jar!/javafx/beans/property/ReadOnlyObjectWrapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/javafx-sdk-13.0.2/lib/javafx.base.jar!/javafx/beans/property/ObjectPropertyBase.class">
+    <entry file="jar://$PROJECT_DIR$/../../../../../../javafx-sdk-13.0.2/lib/javafx.base.jar!/javafx/beans/property/ObjectPropertyBase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/javafx-sdk-13.0.2/lib/javafx.controls.jar!/javafx/scene/control/SelectionModel.class">
+    <entry file="jar://$PROJECT_DIR$/../../../../../../javafx-sdk-13.0.2/lib/javafx.controls.jar!/javafx/scene/control/SelectionModel.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
@@ -830,7 +898,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/javafx-sdk-13.0.2/lib/javafx.graphics.jar!/javafx/scene/layout/BorderPane.class">
+    <entry file="jar://$PROJECT_DIR$/../../../../../../javafx-sdk-13.0.2/lib/javafx.graphics.jar!/javafx/scene/layout/BorderPane.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-135">
           <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
@@ -847,14 +915,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
+    <entry file="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="834" column="19" selection-start-line="834" selection-start-column="19" selection-end-line="834" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.sql/java/sql/Statement.java">
+    <entry file="jar://$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-12.0.1/lib/src.zip!/java.sql/java/sql/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="654" column="8" selection-start-line="654" selection-start-column="8" selection-end-line="654" selection-end-column="8" />

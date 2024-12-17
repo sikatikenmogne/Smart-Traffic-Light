@@ -1,0 +1,19 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Compiled class file
+*.class
+
+# Log and cache files
+*.log
+*.cache
+*.tmp
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
