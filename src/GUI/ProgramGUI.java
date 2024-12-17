@@ -418,6 +418,8 @@ public class ProgramGUI {
                         phaseTime.getValueFactory().setValue((int) db_condition.getPhaseTime());
 
                         ResultsBox.display(db_condition);
+                        KPIResultsBox.display();
+
 
                     } else {
                         AlertBox.display(Constants.fail_window_label, Constants.csv_fail_text_label);
@@ -664,7 +666,7 @@ public class ProgramGUI {
                                 DatabaseConditions database_conditions = Utils.createDatabaseConditions(conditions);
 
                                 ResultsBox.display(database_conditions);
-
+                                KPIResultsBox.display();
                                 if (analyst) {
                                     buttonSave.setDisable(false);
                                 }
@@ -724,18 +726,32 @@ public class ProgramGUI {
         updateCars();
     }
 
+    /**
+     * Updates the positions of all cars in the simulation.
+     * This method clears the current simulation pane, sets up clipping to ensure
+     * cars are displayed within the bounds, and then updates the positions of cars
+     * moving in both north-south and west-east directions.
+     */
     private synchronized void updateCars() {
 
+        // Create a clipping rectangle to ensure cars are displayed within the simulation bounds
         Rectangle outputClip = new Rectangle(990, 530);
         simulation.setClip(outputClip);
 
+        // Add a listener to update the clipping rectangle size when the layout bounds change
         simulation.layoutBoundsProperty().addListener((ov, oldValue, newValue) -> {
             outputClip.setWidth(newValue.getWidth());
             outputClip.setHeight(newValue.getHeight());
         });
 
+        // Update the positions of cars moving in the north-south direction
         updateNorthSouthCars();
+        // Update the positions of cars moving in the west-east direction
         updateWestEastCars();
+        // Update the positions of cars moving in the north-west direction
+//        updateNorthToWestCars();
+//        // Update the positions of cars moving from east to west
+//        updateEastToWestCars();
     }
 
     private void updateWestEastCars() {
@@ -768,6 +784,26 @@ public class ProgramGUI {
         addCars(north_crossroad_2);
         addCars(south_crossroad_1);
         addCars(south_crossroad_2);
+    }
+
+    private void updateNorthToWestCars() {
+        ArrayList<ImageView> north_to_west_crossroad_1 =
+                createCars(1, Constants.NORTH_WEST_DIRECTION, conditions.getLanesInfoFirstCrossroad().get(3));
+        ArrayList<ImageView> north_to_west_crossroad_2 =
+                createCars(2, Constants.NORTH_WEST_DIRECTION, conditions.getLanesInfoSecondCrossroad().get(3));
+
+        addCars(north_to_west_crossroad_1);
+        addCars(north_to_west_crossroad_2);
+    }
+
+    private void updateEastToWestCars() {
+        ArrayList<ImageView> east_to_west_crossroad_1 =
+                createCars(1, Constants.EAST_WEST_DIRECTION, conditions.getLanesInfoFirstCrossroad().get(1));
+        ArrayList<ImageView> east_to_west_crossroad_2 =
+                createCars(2, Constants.EAST_WEST_DIRECTION, conditions.getLanesInfoSecondCrossroad().get(1));
+
+        addCars(east_to_west_crossroad_1);
+        addCars(east_to_west_crossroad_2);
     }
 
     private synchronized ArrayList<ImageView> createCars(int crossroad, int direction, LaneInfo lane_info) {
@@ -843,6 +879,10 @@ public class ProgramGUI {
             case Constants.SOUTH_DIRECTION:
                 return 0;
             case Constants.WEST_DIRECTION:
+                return 90;
+            case Constants.NORTH_WEST_DIRECTION:
+                return 90;
+            case Constants.EAST_WEST_DIRECTION:
                 return 90;
             default:
                 throw new RuntimeException("Bad direction for car...");

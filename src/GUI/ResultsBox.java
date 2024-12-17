@@ -240,6 +240,6 @@ public class ResultsBox {
         bc.getData().addAll(series1, series2);
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.showAndWait();
+        stage.show();
     }
 }

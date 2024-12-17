@@ -190,16 +190,66 @@ public class Constants {
     public static final double TRAFFIC_LIGHT_PHASE_TIME = 20;
 
 
-    // directions
+    //  directions
+    // Direction constant representing the North direction.
     public static final int NORTH_DIRECTION = 0;
+
+    // Direction constant representing the East direction.
     public static final int EAST_DIRECTION = 1;
+
+    // Direction constant representing the South direction.
     public static final int SOUTH_DIRECTION = 2;
+
+    // Direction constant representing the West direction.
     public static final int WEST_DIRECTION = 3;
+
+    // Direction constant representing the North-East direction.
+    public static final int NORTH_EAST_DIRECTION = 4;
+
+    // Direction constant representing the South-East direction.
+    public static final int SOUTH_EAST_DIRECTION = 5;
+
+    // Direction constant representing the South-West direction.
+    public static final int SOUTH_WEST_DIRECTION = 6;
+
+    // Direction constant representing the North-West direction.
+    public static final int NORTH_WEST_DIRECTION = 7;
+
+    // Direction constant representing the East-North direction.
+    public static final int EAST_NORTH_DIRECTION = 8;
+
+    // Direction constant representing the West-North direction.
+    public static final int WEST_NORTH_DIRECTION = 9;
+
+    // Direction constant representing the West-South direction.
+    public static final int WEST_SOUTH_DIRECTION = 10;
+
+    // Direction constant representing the East-South direction.
+    public static final int EAST_SOUTH_DIRECTION = 11;
+
+    // Direction constant representing the East-West direction.
+    public static final int EAST_WEST_DIRECTION = 12;
+
+    // Direction constant representing the West-East direction.
+    public static final int WEST_EAST_DIRECTION = 13;
+
+    // Direction constant representing the North-South direction.
 
 
     //directions names
     public static final String DIRECTION_NAME_EAST_WEST = "east-west";
     public static final String DIRECTION_NAME_NORTH_SOUTH = "north-south";
+    public static final String DIRECTION_NAME_WEST_EAST = "west-east";
+    public static final String DIRECTION_NAME_SOUTH_NORTH = "south-north";
+    public static final String DIRECTION_NAME_EAST_NORTH = "east-north";
+    public static final String DIRECTION_NAME_WEST_SOUTH = "west-south";
+    public static final String DIRECTION_NAME_NORTH_EAST = "north-east";
+    public static final String DIRECTION_NAME_SOUTH_WEST = "south-west";
+    public static final String DIRECTION_NAME_EAST_SOUTH = "east-south";
+    public static final String DIRECTION_NAME_WEST_NORTH = "west-north";
+    public static final String DIRECTION_NAME_NORTH_WEST = "north-west";
+    public static final String DIRECTION_NAME_SOUTH_EAST = "south-east";
+
     public static final String DIRECTION_NAME_EAST = "east";
     public static final String DIRECTION_NAME_WEST = "west";
     public static final String DIRECTION_NAME_NORTH = "north";
