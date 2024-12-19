@@ -6,6 +6,7 @@ import SystemSTL.TrafficComputation.Lane.LaneInfo;
 import Tools.ConsoleColors;
 import Tools.Constants;
 import Tools.Utils;
+import javafx.scene.chart.XYChart;
 
 import java.util.*;
 
@@ -49,7 +50,7 @@ public class Conditions {
     /**
      * Copy constructor.
      *
-     * @param conditions
+     * @param conditions - the Conditions object to copy
      */
     public Conditions(Conditions conditions) {
         first_crossroad_info = new CrossroadInfo(conditions.getFirstCrossroadInfo());
@@ -58,7 +59,7 @@ public class Conditions {
     }
 
     /**
-     * This function change state of traffic lights. Changes appears in two crossroads.
+     * This function changes the state of traffic lights. Changes appear in two crossroads.
      */
     public void changeTrafficLightState() {
         first_crossroad_info.getCrossroad().changeTrafficLightStateOnCrossroad();
@@ -68,7 +69,7 @@ public class Conditions {
     /**
      * This function checks if all vehicles have passed these intersections.
      *
-     * @return true or false
+     * @return true if all cars have passed, false otherwise
      */
     public boolean isAllCarsPassed() {
         for (LaneInfo lane_info : lanes_info_first_crossroad) {
@@ -87,7 +88,7 @@ public class Conditions {
     /**
      * This function returns true if the east-west direction is currently active.
      *
-     * @return
+     * @return true if east-west direction is active, false otherwise
      */
     public boolean isEastWestActive() {
         return first_crossroad_info.getCrossroad().isEastWestActive() && second_crossroad_info.getCrossroad().isEastWestActive();
@@ -96,16 +97,16 @@ public class Conditions {
     /**
      * This function returns true if the north-south direction is currently active.
      *
-     * @return
+     * @return true if north-south direction is active, false otherwise
      */
     public boolean isNorthSouthActive() {
         return first_crossroad_info.getCrossroad().isNorthSouthActive() && second_crossroad_info.getCrossroad().isNorthSouthActive();
     }
 
     /**
-     * This function returns the duration of an north-south traffic light.
+     * This function returns the duration of a north-south traffic light.
      *
-     * @return
+     * @return the duration of the north-south traffic light
      */
     public double getNorthSouthTimeDistribution() {
         if (first_crossroad_info.getCrossroad().getTimeDistribution().getNorthSouth() !=
@@ -118,7 +119,7 @@ public class Conditions {
     /**
      * This function returns the duration of an east-west traffic light.
      *
-     * @return
+     * @return the duration of the east-west traffic light
      */
     public double getEastWestTimeDistribution() {
         if (first_crossroad_info.getCrossroad().getTimeDistribution().getEastWest() !=
@@ -132,14 +133,14 @@ public class Conditions {
      * This function returns the change time of the traffic light.
      * Color change is the time when the traffic light needs to switch between the following colors.
      *
-     * @return time of changing
+     * @return the time of changing
      */
     public double getChangingLightsTime() {
         return first_crossroad_info.getCrossroad().getTimeDistribution().getChangingExecutionTime();
     }
 
     /**
-     * This function add working time to east-west direction.
+     * This function adds working time to the east-west direction.
      */
     public void addTimeToEastWestRoute() {
         first_crossroad_info.getCrossroad().addTimeToEastWestRoute();
@@ -149,7 +150,7 @@ public class Conditions {
     }
 
     /**
-     * This function add working time to north-south direction.
+     * This function adds working time to the north-south direction.
      */
     public void addTimeToNorthSouthRoute() {
         first_crossroad_info.getCrossroad().addTimeToNorthSouthRoute();
@@ -159,8 +160,10 @@ public class Conditions {
     }
 
     /**
-     * This function set distribution time to each crossroad.
-     * When the north-south time changed, the time in the opposite direction (east-west) changed automatically.
+     * This function sets distribution time to each crossroad.
+     * When the north-south time changes, the time in the opposite direction (east-west) changes automatically.
+     *
+     * @param north_south_time - the north-south time to set
      */
     public void setTimeDistribution(double north_south_time) {
         first_crossroad_info.getCrossroad().setTimeDistribution(north_south_time);
@@ -170,7 +173,7 @@ public class Conditions {
     }
 
     /**
-     * This function set default time distribution on the crossroads.
+     * This function sets the default time distribution on the crossroads.
      */
     public void setDefaultTimeDistribution() {
         first_crossroad_info.getCrossroad().getTimeDistribution().setDefaultDistribution();
@@ -180,7 +183,7 @@ public class Conditions {
     }
 
     /**
-     * This function generate information of crossroads for algorithm calculation.
+     * This function generates information of crossroads for algorithm calculation.
      */
     private void createLanesInfo() {
         lanes_info_first_crossroad = new ArrayList<>();
@@ -193,7 +196,7 @@ public class Conditions {
     /**
      * This function generates information for the crossroad about its vehicles.
      *
-     * @param cars             - count of cars
+     * @param cars             - list to store lane information
      * @param actual_crossroad - specific crossroad
      */
     private void createLanesPerCrossroad(ArrayList<LaneInfo> cars, CrossroadInfo actual_crossroad) {
@@ -203,66 +206,148 @@ public class Conditions {
         cars.add(createLaneInfo(actual_crossroad.getWest()));
     }
 
+    /**
+     * This function creates lane information for a specific direction.
+     *
+     * @param direction_info - the direction information
+     * @return the lane information
+     */
     private LaneInfo createLaneInfo(DirectionInfo direction_info) {
         return new LaneInfo(direction_info.getCarsCount(), direction_info.getSpeedLimit(), direction_info.getActualSpeed());
     }
 
+    /**
+     * Gets the first crossroad information.
+     *
+     * @return the first crossroad information
+     */
     public CrossroadInfo getFirstCrossroadInfo() {
         return first_crossroad_info;
     }
 
+    /**
+     * Gets the second crossroad information.
+     *
+     * @return the second crossroad information
+     */
     public CrossroadInfo getSecondCrossroadInfo() {
         return second_crossroad_info;
     }
 
+    /**
+     * Gets the lane information for the first crossroad.
+     *
+     * @return the lane information for the first crossroad
+     */
     public ArrayList<LaneInfo> getLanesInfoFirstCrossroad() {
         return lanes_info_first_crossroad;
     }
 
+    /**
+     * Gets the lane information for the second crossroad.
+     *
+     * @return the lane information for the second crossroad
+     */
     public ArrayList<LaneInfo> getLanesInfoSecondCrossroad() {
         return lanes_info_second_crossroad;
     }
 
+    /**
+     * Gets the lane information for the north direction of the first crossroad.
+     *
+     * @return the lane information for the north direction of the first crossroad
+     */
     public LaneInfo getLaneInfoNorthFirstCrossroad() {
         return lanes_info_first_crossroad.get(Constants.NORTH_DIRECTION);
     }
 
+    /**
+     * Gets the lane information for the east direction of the first crossroad.
+     *
+     * @return the lane information for the east direction of the first crossroad
+     */
     public LaneInfo getLaneInfoEastFirstCrossroad() {
         return lanes_info_first_crossroad.get(Constants.EAST_DIRECTION);
     }
 
+    /**
+     * Gets the lane information for the south direction of the first crossroad.
+     *
+     * @return the lane information for the south direction of the first crossroad
+     */
     public LaneInfo getLaneInfoSouthFirstCrossroad() {
         return lanes_info_first_crossroad.get(Constants.SOUTH_DIRECTION);
     }
 
+    /**
+     * Gets the lane information for the west direction of the first crossroad.
+     *
+     * @return the lane information for the west direction of the first crossroad
+     */
     public LaneInfo getLaneInfoWestFirstCrossroad() {
         return lanes_info_first_crossroad.get(Constants.WEST_DIRECTION);
     }
 
+    /**
+     * Gets the lane information for the north direction of the second crossroad.
+     *
+     * @return the lane information for the north direction of the second crossroad
+     */
     public LaneInfo getLaneInfoNorthSecondCrossroad() {
         return lanes_info_second_crossroad.get(Constants.NORTH_DIRECTION);
     }
 
+    /**
+     * Gets the lane information for the east direction of the second crossroad.
+     *
+     * @return the lane information for the east direction of the second crossroad
+     */
     public LaneInfo getLaneInfoEastSecondCrossroad() {
         return lanes_info_second_crossroad.get(Constants.EAST_DIRECTION);
     }
 
+    /**
+     * Gets the lane information for the south direction of the second crossroad.
+     *
+     * @return the lane information for the south direction of the second crossroad
+     */
     public LaneInfo getLaneInfoSouthSecondCrossroad() {
         return lanes_info_second_crossroad.get(Constants.SOUTH_DIRECTION);
     }
 
+    /**
+     * Gets the lane information for the west direction of the second crossroad.
+     *
+     * @return the lane information for the west direction of the second crossroad
+     */
     public LaneInfo getLaneInfoWestSecondCrossroad() {
         return lanes_info_second_crossroad.get(Constants.WEST_DIRECTION);
     }
 
+    /**
+     * Gets the count of cars in the east-west direction.
+     *
+     * @return the count of cars in the east-west direction
+     */
     public int getEastWestCarsCount() {
         return calculateCarsCountForDirections(false);
     }
 
+    /**
+     * Gets the count of cars in the north-south direction.
+     *
+     * @return the count of cars in the north-south direction
+     */
     public int getNorthSouthCarsCount() {
         return calculateCarsCountForDirections(true);
     }
 
+    /**
+     * Calculates the count of cars for the specified directions.
+     *
+     * @param is_north_south - true if calculating for north-south directions, false for east-west
+     * @return the count of cars for the specified directions
+     */
     private int calculateCarsCountForDirections(boolean is_north_south) {
         int count = 0;
 
@@ -284,27 +369,27 @@ public class Conditions {
     }
 
     /**
-     * This function returns better distribution queue.
+     * Gets the better distribution queue.
      *
-     * @return
+     * @return the better distribution queue
      */
     public Queue<Double> getBetterDistribution() {
         return better_distribution;
     }
 
     /**
-     * This function returns next better distribution time from queue of better distribution times.
+     * Gets the next better distribution time from the queue of better distribution times.
      *
-     * @return
+     * @return the next better distribution time
      */
     public double getNextDistribution() {
         return better_distribution.poll();
     }
 
     /**
-     * This function receives string of better times and convert it to double and add to queue of better distribution.
+     * Sets the better distribution times from a string and adds them to the queue.
      *
-     * @param path - string of better distribution times (->12:8->10:10->14:6)
+     * @param path - string of better distribution times (e.g., ->12:8->10:10->14:6)
      */
     public void setBetterDistribution(String path) {
         better_distribution_string = path;
@@ -315,25 +400,25 @@ public class Conditions {
     }
 
     /**
-     * This function returns better distribution duration.
+     * Gets the algorithm duration.
      *
-     * @return - better_distribution_duration
+     * @return the algorithm duration
      */
     public double getAlgorithmDuration() {
         return algorithm_duration;
     }
 
     /**
-     * This function returns initial duration.
+     * Gets the initial duration.
      *
-     * @return - initial duration
+     * @return the initial duration
      */
     public double getInitialDuration() {
         return initial_duration;
     }
 
     /**
-     * This function sets initial duration of chosen conditions.
+     * Sets the initial duration of the chosen conditions.
      *
      * @param initial_duration - real initial time without smart algorithm
      */
@@ -343,69 +428,109 @@ public class Conditions {
     }
 
     /**
-     * This function returns real duration of working.
+     * Gets the simulation duration.
      *
-     * @return algorithm duration - real time of working
+     * @return the simulation duration
      */
     public double getSimulationDuration() {
         return simulation_duration;
     }
 
     /**
-     * This function sets the simulation time for all vehicles to pass through the intersection and displays its value.
+     * Sets the simulation duration for all vehicles to pass through the intersection and displays its value.
      *
-     * @param simulation_duration
+     * @param simulation_duration - the simulation duration
      */
     public void setSimulationDuration(double simulation_duration) {
         System.out.println(ConsoleColors.RED_BOLD + "Simulation working time: " + simulation_duration + " seconds" + ConsoleColors.RESET);
         this.simulation_duration = simulation_duration;
     }
 
+    /**
+     * Gets the better distribution string.
+     *
+     * @return the better distribution string
+     */
     public String getBetterDistributionString() {
         return better_distribution_string;
     }
 
+    /**
+     * Gets the initial average waiting time (AWT).
+     *
+     * @return the initial AWT
+     */
     public double getInitialAWT() {
         return initial_awt;
     }
 
     /**
-     * This function sets the initial time awt and displays its value.
+     * Sets the initial average waiting time (AWT) and displays its value.
      *
-     * @param initial_awt
+     * @param initial_awt - the initial AWT
      */
     public void setInitialAWT(double initial_awt) {
         this.initial_awt = initial_awt;
         System.out.println(ConsoleColors.CYAN + "Initial time of AWT: " + initial_awt + " seconds." + ConsoleColors.RESET);
     }
 
+    /**
+     * Gets the algorithm average waiting time (AWT).
+     *
+     * @return the algorithm AWT
+     */
     public double getAlgorithmAWT() {
         return algorithm_awt;
     }
 
     /**
-     * This function sets the awt found by algorithm and displays its value.
+     * Sets the algorithm average waiting time (AWT) and displays its value.
      *
-     * @param better_awt
+     * @param better_awt - the algorithm AWT
      */
     public void setAlgorithmAWT(double better_awt) {
         this.algorithm_awt = better_awt;
         System.out.println(ConsoleColors.CYAN + "Algorithm time of AWT: " + algorithm_awt + " seconds" + ConsoleColors.RESET);
     }
 
+    /**
+     * Generates sample data for Average Waiting Time (AWT).
+     *
+     * @return a series of data points representing the average waiting time at different traffic lights.
+     */
+    public static XYChart.Series<String, Number> getAWTData() {
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("AWT");
+        series.getData().add(new XYChart.Data<>("Light 1", 30));
+        series.getData().add(new XYChart.Data<>("Light 2", 45));
+        series.getData().add(new XYChart.Data<>("Light 3", 25));
+        return series;
+    }
+
+
+    /**
+     * Gets the phase time.
+     *
+     * @return the phase time
+     */
     public double getPhaseTime() {
         return first_crossroad_info.getPhaseTime();
     }
 
+    /**
+     * Gets the number of phases.
+     *
+     * @return the number of phases
+     */
     public int getPhasesCount() {
         return phases_count;
     }
 
     /**
-     * This function sets the actual number of phases to resolve the actual state.
-     * Also this function checks if it able to update best time.
+     * Sets the actual number of phases to resolve the actual state.
+     * Also checks if it is able to update the best time.
      *
-     * @param phases_count - found phases count
+     * @param phases_count - the number of phases found
      */
     public void setPhasesCount(int phases_count) {
         this.phases_count = phases_count;

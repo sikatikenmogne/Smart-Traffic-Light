@@ -418,7 +418,7 @@ public class ProgramGUI {
                         phaseTime.getValueFactory().setValue((int) db_condition.getPhaseTime());
 
                         ResultsBox.display(db_condition);
-                        KPIResultsBox.display();
+                        KPIResultsBox.display(db_condition);
 
 
                     } else {
@@ -508,7 +508,11 @@ public class ProgramGUI {
         buttonBack.setOnAction(e -> {
             boolean goBack = ConfirmBox.display(Constants.go_to_previous_page_window_label,
                     Constants.go_to_previous_page_from_conditions_text);
-            if (goBack) window.setScene(windowClientTypes);
+            KPIResultsBox.close();
+            ResultsBox.close();
+            if (goBack) {
+                window.setScene(windowClientTypes);
+            }
         });
         bottomMenu.getChildren().addAll(buttonBack, buttonRun);
 
@@ -533,55 +537,65 @@ public class ProgramGUI {
      * Analyst - go to window with all options.
      * Observer - go to window with limited options.
      */
-    private void createClientTypesWindow() {
-        //Title
-        Label label = new Label(Constants.client_type_window_label);
-        HBox topMenu = new HBox();
-        topMenu.setMinHeight(80);
-        topMenu.setAlignment(Pos.CENTER);
-        topMenu.getChildren().addAll(label);
+private void createClientTypesWindow() {
+    // Title
+    Label label = new Label(Constants.client_type_window_label);
+    HBox topMenu = new HBox();
+    topMenu.setMinHeight(80);
+    topMenu.setAlignment(Pos.CENTER);
+    topMenu.getChildren().addAll(label);
 
+    // Analyst button
+    VBox leftMenu = new VBox(20);
+    Button buttonAnalyst = new Button(Constants.analyst_button_label);
+    buttonAnalyst.setOnAction(e -> {
+        analyst = true;
+        createOptionsWindow(analyst);
+        window.setScene(windowOptions);
+    });
+    leftMenu.setAlignment(Pos.CENTER);
+    Image imageAnalyst = new Image("file:images/others/analyst.png");
+    ImageView imageViewAnalyst = new ImageView(imageAnalyst);
+    imageViewAnalyst.setFitHeight(236);
+    imageViewAnalyst.setFitWidth(250);
+    leftMenu.getChildren().addAll(imageViewAnalyst, buttonAnalyst);
 
-        //Analyst button
-        VBox leftMenu = new VBox(20);
-        Button buttonAnalyst = new Button(Constants.analyst_button_label);
-        buttonAnalyst.setOnAction(e -> {
-            analyst = true;
-            createOptionsWindow(analyst);
-            window.setScene(windowOptions);
-        });
-        leftMenu.setAlignment(Pos.CENTER);
-        Image imageAnalyst = new Image("file:images/others/analyst.png");
-        ImageView imageViewAnalyst = new ImageView(imageAnalyst);
-        imageViewAnalyst.setFitHeight(236);
-        imageViewAnalyst.setFitWidth(250);
-        leftMenu.getChildren().addAll(imageViewAnalyst, buttonAnalyst);
+    // Observer button
+    VBox rightMenu = new VBox(20);
+    Button buttonObserver = new Button(Constants.observer_button_label);
+    buttonObserver.setOnAction(e -> {
+        analyst = false;
+        createOptionsWindow(analyst);
+        window.setScene(windowOptions);
+    });
+    rightMenu.setAlignment(Pos.CENTER);
+    Image imageObserver = new Image("file:images/others/observer.png");
+    ImageView imageViewObserver = new ImageView(imageObserver);
+    imageViewObserver.setFitHeight(236);
+    imageViewObserver.setFitWidth(250);
+    rightMenu.getChildren().addAll(imageViewObserver, buttonObserver);
 
+    // Dashboard button
+    VBox centerMenu = new VBox(20);
+    Button buttonDashboard = new Button("Dashboard");
+    buttonDashboard.setOnAction(e -> {
+        DashboardBox.display();
+    });
+    centerMenu.setAlignment(Pos.CENTER);
+    Image imageDashboard = new Image("file:images/others/dashboard.png");
+    ImageView imageViewDashboard = new ImageView(imageDashboard);
+    imageViewDashboard.setFitHeight(236);
+    imageViewDashboard.setFitWidth(250);
+    centerMenu.getChildren().addAll(imageViewDashboard, buttonDashboard);
 
-        //Observer button
-        VBox rightMenu = new VBox(20);
-        Button buttonObserver = new Button(Constants.observer_button_label);
-        buttonObserver.setOnAction(e -> {
-            analyst = false;
-            createOptionsWindow(analyst);
-            window.setScene(windowOptions);
-        });
-        rightMenu.setAlignment(Pos.CENTER);
-        Image imageObserver = new Image("file:images/others/observer.png");
-        ImageView imageViewObserver = new ImageView(imageObserver);
-        imageViewObserver.setFitHeight(236);
-        imageViewObserver.setFitWidth(250);
-        rightMenu.getChildren().addAll(imageViewObserver, buttonObserver);
-
-
-        BorderPane borderPane = new BorderPane();
-        borderPane.getStylesheets().add("file:src/GUI/style.css");
-        borderPane.setTop(topMenu);
-        borderPane.setRight(rightMenu);
-        borderPane.setLeft(leftMenu);
-        windowClientTypes = new Scene(borderPane, 600, 400);
-    }
-
+    BorderPane borderPane = new BorderPane();
+    borderPane.getStylesheets().add("file:src/GUI/style.css");
+    borderPane.setTop(topMenu);
+    borderPane.setRight(rightMenu);
+    borderPane.setLeft(leftMenu);
+    borderPane.setCenter(centerMenu);
+    windowClientTypes = new Scene(borderPane, 800, 600);
+}
 
     @SuppressWarnings("Duplicates")
     private void createSimulationWindow() {
@@ -630,6 +644,8 @@ public class ProgramGUI {
                     Constants.go_to_previous_page_from_simulation_text);
 
             if (goBack) {
+                KPIResultsBox.close();
+                ResultsBox.close();
                 systemSTL.stop();
                 window.setScene(windowOptions);
             }
@@ -666,7 +682,7 @@ public class ProgramGUI {
                                 DatabaseConditions database_conditions = Utils.createDatabaseConditions(conditions);
 
                                 ResultsBox.display(database_conditions);
-                                KPIResultsBox.display();
+                                KPIResultsBox.display(database_conditions);
                                 if (analyst) {
                                     buttonSave.setDisable(false);
                                 }

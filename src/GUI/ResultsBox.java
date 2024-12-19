@@ -17,9 +17,10 @@ import javafx.stage.Stage;
 
 public class ResultsBox {
 
+    private static Stage stage;
     @SuppressWarnings("Duplicates")
     public static void display(DatabaseConditions database_conditions) {
-        Stage stage = new Stage();
+        stage = new Stage();
         stage.setTitle("Bar Chart");
 
         Button button = new Button(Constants.close_button_label);
@@ -241,5 +242,11 @@ public class ResultsBox {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+    }
+
+    public static void close() {
+        if (stage != null) {
+            stage.close();
+        }
     }
 }

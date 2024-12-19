@@ -5,25 +5,25 @@ public class Constants {
     /////////////////////database queries///////////////////////
     //Creates
     public static final String create_database_query = "create database if not exists stl";
-    public static final String create_conditions_table_query = "create table if not exists stl.Conditions (\n" + 
-    		"	`condition_id` int not null auto_increment,\n" + 
-    		"    `condition_name` varchar(20) not null,\n" + 
-    		"    `Date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n" + 
-    		"    `init_total_time` double,\n" + 
-    		"    `better_total_time` double,\n" + 
-    		"    `distribution_path` varchar(255),\n" + 
-    		"    `init_awt` double,\n" + 
-    		"    `better_awt` double,\n" +
-    		"    `phase_time` double,\n" +
-    		"    PRIMARY KEY (`condition_id`)\n" + 
-    		")";
+    public static final String create_conditions_table_query = "create table if not exists stl.Conditions (\n" +
+            "    `condition_id` int not null auto_increment,\n" +
+            "    `condition_name` varchar(20) not null,\n" +
+            "    `Date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n" +
+            "    `init_total_time` double,\n" +
+            "    `better_total_time` double,\n" +
+            "    `distribution_path` varchar(255),\n" +
+            "    `init_awt` double,\n" +
+            "    `better_awt` double,\n" +
+            "    `phase_time` double,\n" +
+            "    PRIMARY KEY (`condition_id`)\n" +
+            ")";
     public static final String create_directionsInfo_table_query = "create table if not exists stl.DirectionsInfo (\n" +
-            "	`direction_info_id` int not null auto_increment, \n" +
-            "	`cars_amount` int not null,\n" +
-            "	`average_speed` int not null,\n" +
-            "	`limit_speed` int not null,\n" +
-            "	`type` varchar(20) not null,\n" +
-            "	PRIMARY KEY (`direction_info_id`)\n" +
+            "    `direction_info_id` int not null auto_increment, \n" +
+            "    `cars_amount` int not null,\n" +
+            "    `average_speed` int not null,\n" +
+            "    `limit_speed` int not null,\n" +
+            "    `type` varchar(20) not null,\n" +
+            "    PRIMARY KEY (`direction_info_id`)\n" +
             ")";
     public static final String create_traffic_lights_table_query = "create table if not exists stl.TrafficLights (\n" +
             "    `traffic_light_id` int not null auto_increment,\n" +
@@ -40,13 +40,13 @@ public class Constants {
             "    foreign key(`direction_info_id`) references DirectionsInfo(`direction_info_id`)\n" +
             ")";
     public static final String create_crossroadsInfo_table_query = "create table if not exists stl.CrossroadsInfo(\n" +
-            "	`crossroad_info_id` int not null auto_increment,\n" +
+            "    `crossroad_info_id` int not null auto_increment,\n" +
             "    `condition_id` int not null,\n" +
             "    `north_direction_info_id` int,\n" +
-            "	`east_direction_info_id` int,\n" +
+            "    `east_direction_info_id` int,\n" +
             "    `south_direction_info_id` int,\n" +
             "    `west_direction_info_id` int,\n" +
-            "	PRIMARY KEY (`crossroad_info_id`),\n" +
+            "    PRIMARY KEY (`crossroad_info_id`),\n" +
             "    foreign key(`condition_id`) references Conditions(`condition_id`),\n" +
             "    foreign key(`north_direction_info_id`) references DirectionsInfo(`direction_info_id`),\n" +
             "    foreign key(`east_direction_info_id`) references DirectionsInfo(`direction_info_id`),\n" +
@@ -54,7 +54,7 @@ public class Constants {
             "    foreign key(`west_direction_info_id`) references DirectionsInfo(`direction_info_id`)\n" +
             ")";
     public static final String create_crossroads_table_query = "create table if not exists stl.Crossroads(\n" +
-            "	`crossroad_id` int not null auto_increment,\n" +
+            "    `crossroad_id` int not null auto_increment,\n" +
             "    `crossroad_info_id` int not null,\n" +
             "    `north_traffic_light_id` int,\n" +
             "    `east_traffic_light_id` int,\n" +
@@ -68,7 +68,7 @@ public class Constants {
             "    foreign key(`south_traffic_light_id`) references TrafficLights(`traffic_light_id`),\n" +
             "    foreign key(`west_traffic_light_id`) references TrafficLights(`traffic_light_id`)\n" +
             ")";
-    
+
     //Drops
     public static final String drop_database_query = "drop database if exists stl";
 
@@ -81,8 +81,8 @@ public class Constants {
             + "stl.CrossroadsInfo(condition_id, north_direction_info_id, east_direction_info_id, south_direction_info_id, west_direction_info_id)"
             + " values(?,?,?,?,?)";
     public static final String insert_crossroads_statment = "insert into"
-    		+ " stl.crossroads(crossroad_info_id, north_traffic_light_id, east_traffic_light_id, south_traffic_light_id, west_traffic_light_id, actual_state)"
-    		+ " values(?,?,?,?,?,?)";
+            + " stl.crossroads(crossroad_info_id, north_traffic_light_id, east_traffic_light_id, south_traffic_light_id, west_traffic_light_id, actual_state)"
+            + " values(?,?,?,?,?,?)";
     public static final String insert_traffic_light = "insert into stl.trafficlights(actual_state) values(?)";
 
     //Selects
@@ -92,85 +92,80 @@ public class Constants {
     public static final String select_condition_by_date_query = "select * from stl.conditions where date =?";
     public static final String select_crossroadsInfo_ids_query = "select crossroad_info_id from stl.crossroadsinfo where condition_id =?";
     public static final String select_crossroadsInfo_query = "select north_direction_info_id, east_direction_info_id, south_direction_info_id, west_direction_info_id"
-    		+ " from stl.crossroadsinfo where crossroad_info_id =?";
+            + " from stl.crossroadsinfo where crossroad_info_id =?";
     public static final String select_directionInfo_query = "select cars_amount, average_speed, limit_speed from stl.directionsinfo "
-    		+ "where direction_info_id = ?";
+            + "where direction_info_id = ?";
     ///////////////////////////////////////////////////////////
 
     //log messages
-    public static final String connection_fail = "ERROR: connection fail!";
-    public static final String create_database_fail = "ERROR: create local database fail!";
+    public static final String connection_fail = "ERREUR : échec de la connexion !";
+    public static final String create_database_fail = "ERREUR : échec de la création de la base de données locale !";
 
     //window labels
-    public static final String traffic_conditions_window_label = "Choose traffic conditions";
-    public static final String home_page_window_label = "Welcome to the Smart traffic light!";
-    public static final String client_type_window_label = "Choose your occupation";
+    public static final String traffic_conditions_window_label = "Choisissez les conditions de circulation";
+    public static final String home_page_window_label = "Bienvenue au Smart Traffic Light !";
+    public static final String client_type_window_label = "Choisissez votre occupation";
     public static final String simulation_window_label = "Simulation";
-    public static final String about_us_window_label = "About us";
-    public static final String database_window_label = "Database";
-    public static final String database_connect_window_label = "Connect to Database";
-    public static final String random_window_label = "Random";
-    public static final String go_to_previous_page_window_label = "Go to previous window";
-    public static final String exit_window_label = "Exit";
-    public static final String fail_window_label = "Fail";
-
-
+    public static final String about_us_window_label = "À propos de nous";
+    public static final String database_window_label = "Base de données";
+    public static final String database_connect_window_label = "Connectez-vous à la base de données";
+    public static final String random_window_label = "Aléatoire";
+    public static final String go_to_previous_page_window_label = "Retourner à la fenêtre précédente";
+    public static final String exit_window_label = "Sortie";
+    public static final String fail_window_label = "Échec";
 
     //buttons labels
-    public static final String yes_button_label = "Yes";
-    public static final String no_button_label = "No";
-    public static final String reset_button_label = "Reset";
-    public static final String run_button_label = "Run";
-    public static final String analyst_button_label = "Analyst";
-    public static final String observer_button_label = "Observer";
-    public static final String save_button_label = "Save";
-    public static final String back_button_label = "Back";
-    public static final String start_button_label = "Start";
-    public static final String database_button_label = "Database";
-    public static final String random_button_label = "Random";
+    public static final String yes_button_label = "Oui";
+    public static final String no_button_label = "Non";
+    public static final String reset_button_label = "Réinitialiser";
+    public static final String run_button_label = "Exécuter";
+    public static final String analyst_button_label = "Analyste";
+    public static final String observer_button_label = "Observateur";
+    public static final String save_button_label = "Enregistrer";
+    public static final String back_button_label = "Retour";
+    public static final String start_button_label = "Démarrer";
+    public static final String database_button_label = "Base de données";
+    public static final String random_button_label = "Aléatoire";
     public static final String info_button_label = "Info";
-    public static final String lets_start_button_label = "Let's start";
-    public static final String about_us_button_label = "About us";
-    public static final String close_button_label = "Close";
-    public static final String cancel_button = "Cancel";
-    public static final String confirm_button_database = "Choose";
-    public static final String open_csv_button_label = "Open CSV";
+    public static final String lets_start_button_label = "Commençons";
+    public static final String about_us_button_label = "À propos de nous";
+    public static final String close_button_label = "Fermer";
+    public static final String cancel_button = "Annuler";
+    public static final String confirm_button_database = "Choisir";
+    public static final String open_csv_button_label = "Ouvrir CSV";
 
     //pages labels
     public static final String about_us_text = "Smart Traffic Light\nVersion 1.0\n" +
-            "Created by Netanel Davidov and Maxim Marmer";
-    public static final String go_to_previous_page_from_conditions_text = "If you go back all options will reset\n" +
-            "Sure you want to go back?";
-    public static final String go_to_previous_page_from_simulation_text = "Current simulation will be deleted\n" +
-            "Sure you want to go back?";
-    public static final String crossroad_1_label = "Crossroad 1";
-    public static final String crossroad_2_label = "Crossroad 2";
-    public static final String other_features_label = "Other features";
-    public static final String route_label = "Route";
-    public static final String east_label = "East";
-    public static final String west_label = "West";
-    public static final String north_label = "North";
-    public static final String south_label = "South";
-    public static final String cars_count_label = "Cars count";
-    public static final String actual_speed_label = "Actual speed";
-    public static final String speed_limit_label = "Speed limit";
+            "Créé par le Groupe 2, Exars 2025";
+    public static final String go_to_previous_page_from_conditions_text = "Si vous revenez en arrière, toutes les options seront réinitialisées\n" +
+            "Êtes-vous sûr de vouloir revenir en arrière ?";
+    public static final String go_to_previous_page_from_simulation_text = "La simulation en cours sera supprimée\n" +
+            "Êtes-vous sûr de vouloir revenir en arrière ?";
+    public static final String crossroad_1_label = "Carrefour 1";
+    public static final String crossroad_2_label = "Carrefour 2";
+    public static final String other_features_label = "Autres fonctionnalités";
+    public static final String route_label = "Itinéraire";
+    public static final String east_label = "Est";
+    public static final String west_label = "Ouest";
+    public static final String north_label = "Nord";
+    public static final String south_label = "Sud";
+    public static final String cars_count_label = "Nombre de voitures";
+    public static final String actual_speed_label = "Vitesse actuelle";
+    public static final String speed_limit_label = "Limite de vitesse";
     public static final String window_label = "Smart Traffic Light";
 
-    public static final String url_label = "url: ";
-    public static final String user_label = "user: ";
-    public static final String password_label = "password: ";
-    public static final String connect_button = "Connect";
-    public static final String create_database_button = "Create database";
+    public static final String url_label = "url : ";
+    public static final String user_label = "utilisateur : ";
+    public static final String password_label = "mot de passe : ";
+    public static final String connect_button = "Connecter";
+    public static final String create_database_button = "Créer une base de données";
 
-    public static final String choose_file_from_database_label = "Choose conditions file";
-    public static final String generate_random_data_label = "Generate random data?";
-    public static final String reset_conditions_label = "Reset all values?";
-    public static final String exit_text_label = "Sure you want to exit?";
-    public static final String fail_text_label = "Observer does not have this permissions.";
-    public static final String csv_fail_text_label = "The opened file has wrong data format.";
-
-
-
+    public static final String choose_file_from_database_label = "Choisissez le fichier des conditions";
+    public static final String generate_random_data_label = "Générer des données aléatoires ?";
+    public static final String reset_conditions_label = "Réinitialiser toutes les valeurs ?";
+    public static final String exit_text_label = "Êtes-vous sûr de vouloir quitter ?";
+    public static final String fail_text_label = "L'observateur n'a pas ces permissions.";
+    public static final String csv_fail_text_label = "Le fichier ouvert a un format de données incorrect.";
 
     public static final double POLICE_MAX_SPEED = 70;
     public static final double AMBULANCE_MAX_SPEED = 70;
@@ -178,93 +173,58 @@ public class Constants {
     public static final double USUAL_MAX_SPEED = 70;
     public static final double TRACK_MAX_SPEED = 70;
 
-
     //sizes
     public static final double TRAFFIC_LIGHT_HEIGHT = 40;
     public static final double TRAFFIC_LIGHT_WIDTH = 15;
-
 
     //times
     public static final int TRAFFIC_LIGHT_CHANGING_TIME = 2;
     public static final int TRAFFIC_LIGHT_MIN_DISTRIBUTION = 5;
     public static final double TRAFFIC_LIGHT_PHASE_TIME = 20;
 
-
     //  directions
-    // Direction constant representing the North direction.
     public static final int NORTH_DIRECTION = 0;
-
-    // Direction constant representing the East direction.
     public static final int EAST_DIRECTION = 1;
-
-    // Direction constant representing the South direction.
     public static final int SOUTH_DIRECTION = 2;
-
-    // Direction constant representing the West direction.
     public static final int WEST_DIRECTION = 3;
-
-    // Direction constant representing the North-East direction.
     public static final int NORTH_EAST_DIRECTION = 4;
-
-    // Direction constant representing the South-East direction.
     public static final int SOUTH_EAST_DIRECTION = 5;
-
-    // Direction constant representing the South-West direction.
     public static final int SOUTH_WEST_DIRECTION = 6;
-
-    // Direction constant representing the North-West direction.
     public static final int NORTH_WEST_DIRECTION = 7;
-
-    // Direction constant representing the East-North direction.
     public static final int EAST_NORTH_DIRECTION = 8;
-
-    // Direction constant representing the West-North direction.
     public static final int WEST_NORTH_DIRECTION = 9;
-
-    // Direction constant representing the West-South direction.
     public static final int WEST_SOUTH_DIRECTION = 10;
-
-    // Direction constant representing the East-South direction.
     public static final int EAST_SOUTH_DIRECTION = 11;
-
-    // Direction constant representing the East-West direction.
     public static final int EAST_WEST_DIRECTION = 12;
-
-    // Direction constant representing the West-East direction.
     public static final int WEST_EAST_DIRECTION = 13;
 
-    // Direction constant representing the North-South direction.
-
-
     //directions names
-    public static final String DIRECTION_NAME_EAST_WEST = "east-west";
-    public static final String DIRECTION_NAME_NORTH_SOUTH = "north-south";
-    public static final String DIRECTION_NAME_WEST_EAST = "west-east";
-    public static final String DIRECTION_NAME_SOUTH_NORTH = "south-north";
-    public static final String DIRECTION_NAME_EAST_NORTH = "east-north";
-    public static final String DIRECTION_NAME_WEST_SOUTH = "west-south";
-    public static final String DIRECTION_NAME_NORTH_EAST = "north-east";
-    public static final String DIRECTION_NAME_SOUTH_WEST = "south-west";
-    public static final String DIRECTION_NAME_EAST_SOUTH = "east-south";
-    public static final String DIRECTION_NAME_WEST_NORTH = "west-north";
-    public static final String DIRECTION_NAME_NORTH_WEST = "north-west";
-    public static final String DIRECTION_NAME_SOUTH_EAST = "south-east";
+    public static final String DIRECTION_NAME_EAST_WEST = "est-ouest";
+    public static final String DIRECTION_NAME_NORTH_SOUTH = "nord-sud";
+    public static final String DIRECTION_NAME_WEST_EAST = "ouest-est";
+    public static final String DIRECTION_NAME_SOUTH_NORTH = "sud-nord";
+    public static final String DIRECTION_NAME_EAST_NORTH = "est-nord";
+    public static final String DIRECTION_NAME_WEST_SOUTH = "ouest-sud";
+    public static final String DIRECTION_NAME_NORTH_EAST = "nord-est";
+    public static final String DIRECTION_NAME_SOUTH_WEST = "sud-ouest";
+    public static final String DIRECTION_NAME_EAST_SOUTH = "est-sud";
+    public static final String DIRECTION_NAME_WEST_NORTH = "ouest-nord";
+    public static final String DIRECTION_NAME_NORTH_WEST = "nord-ouest";
+    public static final String DIRECTION_NAME_SOUTH_EAST = "sud-est";
 
-    public static final String DIRECTION_NAME_EAST = "east";
-    public static final String DIRECTION_NAME_WEST = "west";
-    public static final String DIRECTION_NAME_NORTH = "north";
-    public static final String DIRECTION_NAME_SOUTH = "south";
-    public static final String CROSSROAD_NAME_FIRST = "first";
-    public static final String CROSSROAD_NAME_SECOND = "second";
+    public static final String DIRECTION_NAME_EAST = "est";
+    public static final String DIRECTION_NAME_WEST = "ouest";
+    public static final String DIRECTION_NAME_NORTH = "nord";
+    public static final String DIRECTION_NAME_SOUTH = "sud";
+    public static final String CROSSROAD_NAME_FIRST = "premier";
+    public static final String CROSSROAD_NAME_SECOND = "deuxième";
 
     //Units
     public static final double METER_TO_PIXEL = 15;
 
-
     //String delimiters
     public static final String PHASE_DELIMITER = "->";
     public static final String TIMES_DELIMITER = ":";
-
 
     //Start values
     public static final int CARS_COUNT_SHORT_ROAD_DEFAULT = 3;
@@ -287,30 +247,29 @@ public class Constants {
     public static final double SAFETY_DISTANCE_TO_STOP = 1;
     public static final double START_DISTANCE_BETWEEN_CARS = 2;
 
-
     //info text
-    public static final String INFO_LABEL = "Main information";
-    public static final String INFO_DIRECTIONS_LABEL = "Directions information";
-    public static final String INFO_TRAFFIC_LIGHTS_LABEL = "Traffic lights information";
-    public static final String INFO_CARS_COUNT_LABEL = "Cars count information";
-    public static final String INFO_SPEED_LIMIT_LABEL = "Speed limit information";
-    public static final String INFO_ACTUAL_SPEED_LABEL = "Actual speed information";
+    public static final String INFO_LABEL = "Informations principales";
+    public static final String INFO_DIRECTIONS_LABEL = "Informations sur les directions";
+    public static final String INFO_TRAFFIC_LIGHTS_LABEL = "Informations sur les feux de circulation";
+    public static final String INFO_CARS_COUNT_LABEL = "Informations sur le nombre de voitures";
+    public static final String INFO_SPEED_LIMIT_LABEL = "Informations sur la limite de vitesse";
+    public static final String INFO_ACTUAL_SPEED_LABEL = "Informations sur la vitesse actuelle";
 
-    public static final String INFO_TEXT = "Before starting the application, you must select the conditions that the algorithm will try to solve." +
-            "\n\nConditions include cars and speed for two intersections." +
-            "\n\nThe user can set this data manually, load it from the database by clicking on the 'Database' button, or select it by random clicking 'Random' button." +
-            "\n\nTo reset all selected settings, press the 'Reset' button.";
-    public static final String INFO_DIRECTIONS_TEXT = "Each intersection has four roads." +
-            "\n\nFor a better understanding of the movement of the vehicle, the picture on the left shows the order with the names of the sides and it is in this order that the lanes and directions of movement will be called.";
-    public static final String INFO_TRAFFIC_LIGHTS_TEXT = "Each lane is regulated by a traffic light. In the figure, the arrow from the traffic light indicates the lane that will depend on the particular traffic light." +
-            "\n\nEach traffic light has 4 states: green, yellow, red, red-yellow." +
-            "\n\nGreen - traffic allowed." +
-            "\nYellow - stop moving." +
-            "\nRed - cars are waiting for green." +
-            "\nRed-yellow - mice are ready to go." +
-            "\n\nIt takes 3 seconds to switch the state of traffic light colors.";
-    public static final String INFO_CARS_COUNT_TEXT = "The number of cars indicates how many cars must pass the intersection from the selected side.";
-    public static final String INFO_SPEED_LIMIT_TEXT = "Speed limit indicates the speed limit for the selected road.";
-    public static final String INFO_ACTUAL_SPEED_TEXT = "The actual speed indicates the speed at which the movement is taking place in real time." +
-            "\n\nActual speed can be less than speed limit, but can not be more than speed limit on the road.";
+    public static final String INFO_TEXT = "Avant de démarrer l'application, vous devez sélectionner les conditions que l'algorithme essaiera de résoudre." +
+            "\n\nLes conditions incluent les voitures et la vitesse pour deux intersections." +
+            "\n\nL'utilisateur peut définir ces données manuellement, les charger à partir de la base de données en cliquant sur le bouton 'Base de données', ou les sélectionner de manière aléatoire en cliquant sur le bouton 'Aléatoire'." +
+            "\n\nPour réinitialiser tous les paramètres sélectionnés, appuyez sur le bouton 'Réinitialiser'.";
+    public static final String INFO_DIRECTIONS_TEXT = "Chaque intersection a quatre routes." +
+            "\n\nPour une meilleure compréhension du mouvement du véhicule, l'image à gauche montre l'ordre avec les noms des côtés et c'est dans cet ordre que les voies et les directions de mouvement seront appelées.";
+    public static final String INFO_TRAFFIC_LIGHTS_TEXT = "Chaque voie est régulée par un feu de circulation. Dans la figure, la flèche du feu de circulation indique la voie qui dépendra du feu de circulation particulier." +
+            "\n\nChaque feu de circulation a 4 états : vert, jaune, rouge, rouge-jaune." +
+            "\nVert - circulation autorisée." +
+            "\nJaune - arrêt du mouvement." +
+            "\nRouge - les voitures attendent le vert." +
+            "\nRouge-jaune - les voitures sont prêtes à partir." +
+            "\n\nIl faut 3 secondes pour changer l'état des couleurs du feu de circulation.";
+    public static final String INFO_CARS_COUNT_TEXT = "Le nombre de voitures indique combien de voitures doivent traverser l'intersection depuis le côté sélectionné.";
+    public static final String INFO_SPEED_LIMIT_TEXT = "La limite de vitesse indique la limite de vitesse pour la route sélectionnée.";
+    public static final String INFO_ACTUAL_SPEED_TEXT = "La vitesse actuelle indique la vitesse à laquelle le mouvement se déroule en temps réel." +
+            "\n\nLa vitesse actuelle peut être inférieure à la limite de vitesse, mais ne peut pas être supérieure à la limite de vitesse sur la route.";
 }

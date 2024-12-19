@@ -33,7 +33,7 @@ public class Utils {
         double random = Math.random();
 
         if (random < 0.1) {
-            type = CarTypes.Police;
+            type = CarTypes.Usual;
         } else if (0.1 <= random && random < 0.5) {
             type = CarTypes.Taxi;
         } else if (0.5 <= random && random < 0.6) {
